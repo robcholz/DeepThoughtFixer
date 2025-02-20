@@ -1,0 +1,13 @@
+[package]
+name = "DeepThoughtFixer"
+description = "Fix the trash NC State DeepThought grading system."
+authors = ["Finn Sheng"]
+version = "0.1.0"
+edition = "2021"
+homepage = "https://github.com/robcholz/DeepThoughtFixer"
+repository = "https://github.com/robcholz/DeepThoughtFixer.git"
+license = "GPL-3"
+
+[dependencies]
+rocket = { version = "0.5.1", features = ["json"] }
+serde = "1.0.217"
