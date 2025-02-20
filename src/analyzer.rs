@@ -102,7 +102,7 @@ pub fn apply_the_rule(
     Ok(result)
 }
 
-pub fn autocomplete_rules_available_single(
+fn autocomplete_rules_available_single(
     a: Option<String>,
     b: Option<String>,
     order: bool,
@@ -223,7 +223,7 @@ pub fn autocomplete_rules_available_single(
     Ok(result)
 }
 
-pub fn apply_the_rule_single(
+fn apply_the_rule_single(
     rule: Rule,
     a: Option<String>,
     b: Option<String>,
