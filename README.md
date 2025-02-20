@@ -18,6 +18,7 @@ Returns a list of applicable logical rules based on the given propositions.
 **Request**
 
 • left (optional): First proposition (string).
+
 • right (optional): Second proposition (string).
 
 ```json
@@ -29,7 +30,9 @@ Returns a list of applicable logical rules based on the given propositions.
 **Response**
 
 • If valid propositions are provided, returns a list of applicable rules.
+
 • If both propositions are missing, returns an error.
+
 • If syntax errors exist in the propositions, returns an error.
 
 ```json
@@ -54,7 +57,9 @@ Applies a given logical rule to one or two provided propositions and returns the
 **Request**
 
 • rule (required): A valid logical rule from the predefined Rule set.
+
 • left (optional): First proposition (string).
+
 • right (optional): Second proposition (string).
 
 ```json
@@ -67,7 +72,9 @@ Applies a given logical rule to one or two provided propositions and returns the
 **Response**
 
 • Returns the transformed propositions after applying the rule.
+
 • If the rule cannot be applied to the given propositions, an error is returned.
+
 • If invalid syntax or missing propositions are detected, an error is returned.
 
 ```json
