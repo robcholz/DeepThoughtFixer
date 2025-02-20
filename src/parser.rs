@@ -64,7 +64,12 @@ impl Display for ASTNode {
                 write!(f, "{}{}", op, expr)
             }
             ASTNode::BinaryOp { op, left, right } => {
-                write!(f, "({} {} {})", left, op, right)
+                // indent is 1
+                if left.is_identifier() && right.is_identifier() {
+                    write!(f, "{} {} {}", left, op, right)
+                } else {
+                    write!(f, "({} {} {})", left, op, right)
+                }
             }
             ASTNode::Identifier(id) => {
                 write!(f, "{}", id)
